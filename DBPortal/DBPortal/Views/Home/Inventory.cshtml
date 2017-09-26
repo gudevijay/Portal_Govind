@@ -1,0 +1,38 @@
+﻿@using DBPortal.Models;
+@model List<InventoryModel>
+@{
+    ViewBag.Title = "Inventory";
+}
+<link href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+
+
+<table id="example" class="hover" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011/04/25</td>
+            <td>$320,800</td>
+        </tr>
+    </tbody>
+</table>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
