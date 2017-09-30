@@ -3,36 +3,324 @@
 @{
     ViewBag.Title = "Inventory";
 }
-<link href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
-<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 
-
-<table id="example" class="hover" cellspacing="0" width="100%">
+<h3>Search Inventory</h3>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-10">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class='input-group date' id='startdate' name="startdate">
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class='input-group date' id='enddate' name="enddate">
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button>Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+<h3>Inventory Data</h3>
+<hr />
+<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
+            <div class="btn-group pull-right">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                    Tools <i class="fa fa-angle-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                    <li>
+                        <a href="javascript:;">
+                            Print
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            Save as PDF
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            Export to Excel
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table table-striped table-hover table-bordered" id="sample_editable_1">
     <thead>
         <tr>
+            <th>ServerID</th>
+            <th>ServerIP</th>
+            <th>ServerPort</th>
             <th>Name</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Age</th>
-            <th>Start date</th>
-            <th>Salary</th>
+            <th>InstanceName</th>
+            <th>SQLVersion</th>
+            <th>Edition</th>
+            <th>OSVesion</th>
+            <th>ServeType</th>
+            <th>IsActive</th>
+            <th>ServerEnv</th>
+            <th>Description</th>
+            <th>CommonName</th>
+            <th>CMDB_Location</th>
         </tr>
     </thead>
 
     <tbody>
         <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
         </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+        </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+        </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+        </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+        </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+        </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+        </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+        </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+        </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+        </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+
+        </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+        </tr>
+        <tr>
+            <td>ServerID</td>
+            <td>ServerIP</td>
+            <td>ServerPort</td>
+            <td>Name</td>
+            <td>InstanceName</td>
+            <td>SQLVersion</td>
+            <td>Edition</td>
+            <td>OSVesion</td>
+            <td>ServeType</td>
+            <td>IsActive</td>
+            <td>ServerEnv</td>
+            <td>Description</td>
+            <td>CommonName</td>
+            <td>CMDB_Location</td>
+        </tr>
+        @*<tr>
+
+                @foreach (var inv in Model)
+                {
+                    <td>@inv.ServerID</td>
+                    <td>@inv.ServerIP</td>
+                    <td>@inv.ServerPort</td>
+                    <td>@inv.Name</td>
+                    <td>@inv.InstanceName</td>
+                    <td>@inv.SQLVersion</td>
+                    <td>@inv.Edition</td>
+                    <td>@inv.OSVesion</td>
+                    <td>@inv.ServeType</td>
+                    <td>@inv.IsActive</td>
+                    <td>@inv.ServerEnv</td>
+                    <td>@inv.Description</td>
+                    <td>@inv.CommonName</td>
+                    <td>@inv.CMDB_Location</td>
+                }
+            </tr>*@
     </tbody>
 </table>
-<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script>
-    $(document).ready(function () {
-        $('#example').DataTable();
-    });
+  
 </script>
