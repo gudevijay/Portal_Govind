@@ -107,7 +107,6 @@
             $("#TableData").html('');
             $.ajax({
                 url: '/Home/SearchInventory?searchWord=' + searchWord,
-                data: JSON.stringify(jsondata),
                 type: "GET",
                 async: true,
                 contentType: "application/json;charset=utf-8",
