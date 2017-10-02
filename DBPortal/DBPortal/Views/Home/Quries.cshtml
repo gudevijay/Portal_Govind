@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewBag.Title = "Quries";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Quries</h2>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="col-md-3">
+                <label>Server Type</label>
+            </div>
+            <div class="col-md-7">
+                <select name="ServerType" id="ServerType" class="form-control select2" disabled>
+                    <option value="1" selected="selected">SQLSERVER</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-3">
+                <label>Start Date</label>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <div class='input-group' >
+                        <input type='text' class="form-control" placeholder="Start Date" id='StartDate' name="StartDate" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="col-md-3">
+                <label>Environment</label>
+            </div>
+            <div class="col-md-7">
+                <select name="Environment" id="Environment" class="form-control select2" onchange="BindServers()">
+                    <option value="0" selected="selected">Please Select</option>
+                    <option value="1">Production</option>
+                    <option value="2">DR</option>
+                    <option value="3">Development</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-3">
+                <label>End Date</label>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <div class='input-group'>
+                        <input type='text' class="form-control" placeholder="End Date" id='EndDate' name="EndDate" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="col-md-3">
+                <label>Server Name</label>
+            </div>
+            <div class="col-md-7">
+                @Html.DropDownList("ServerName", new SelectList(Enumerable.Empty<SelectListItem>()), new { @class = "form-control select2" })
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-5"></div>
+        <div class="col-md-6">
+
+            <div class="col-md-3">
+                <button type="button" onclick="SearchData()" class="btn btn-info">Submit</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="TableResults">
+
+</div>
+
+<script>
+    function SearchData() {
+        var sType = $("#ServerType").val();
+        var env = $("#Environment").val();
+        var sName = $("#ServerName").val();
+        var sDate = $("#StartDate").val();
+        var eDate = $("#EndDate").val();
+        alert(sType);
+        alert(env);
+        alert(sName);
+        alert(sDate);
+        alert(sDate);
+        $("#TableResults").html('');
+
+        var jsonData = {
+            ServerType: sType,
+            ServerName: sName,
+            Environment: env,
+            StartDate: sDate,
+            EndDate: eDate
+
+        };
+        $.ajax({
+            url: '/Home/GetQueryResults',
+            type: "POST",
+            data: JSON.stringify(jsonData),
+            async: true,
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                $("#TableResults").html(data);
+            },
+            error: function (xhr, status, error) {
+
+            }
+        });
+
+    }
+
+ 
+
+        function BindServers() {
+            var id = $("#Environment").val();
+
+            var select = $("#ServerName");
+            select.empty();
+            select.append($('<option/>', {
+                value: 0,
+                text: "Please Select"
+            }));
+            if (id != "0") {
+                $.getJSON("/Home/GetServerNames", { env: id },
+                    function (data) {
+                        $.each(data, function (index, itemData) {
+                            select.append($('<option/>', {
+                                value: itemData.ServerID,
+                                text: itemData.ServerName
+                            }));
+                        });
+                    });
+            }
+        }
+ 
+</script>

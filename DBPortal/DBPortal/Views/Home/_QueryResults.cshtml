@@ -1,0 +1,80 @@
+﻿
+@using DBPortal.Models;
+@model List<InventoryModel>
+<div class="table-toolbar">
+    <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
+            <div class="btn-group pull-right">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                    Tools <i class="fa fa-angle-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                    <li>
+                        <a href="javascript:;">
+                            Print
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            Save as PDF
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            Export to Excel
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" style="overflow-x:auto !important;overflow-y:hidden !important;">
+        <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+            <thead>
+                <tr>
+                    <th>ServerID</th>
+                    <th>ServerIP</th>
+                    <th>ServerPort</th>
+                    <th>Name</th>
+                    <th>InstanceName</th>
+                    <th>SQLVersion</th>
+                    <th>Edition</th>
+                    <th>OSVesion</th>
+                    <th>ServeType</th>
+                    <th>IsActive</th>
+                    <th>ServerEnv</th>
+                    <th>Description</th>
+                    <th>CommonName</th>
+                    <th>CMDB_Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var inv in Model)
+            {
+                    <tr>
+                        <td>@inv.ServerID</td>
+                        <td>@inv.ServerIP</td>
+                        <td>@inv.ServerPort</td>
+                        <td>@inv.Name</td>
+                        <td>@inv.InstanceName</td>
+                        <td>@inv.SQLVersion</td>
+                        <td>@inv.Edition</td>
+                        <td>@inv.OSVesion</td>
+                        <td>@inv.ServeType</td>
+                        <td>@inv.IsActive</td>
+                        <td>@inv.ServerEnv</td>
+                        <td>@inv.Description</td>
+                        <td>@inv.CommonName</td>
+                        <td>@inv.CMDB_Location</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

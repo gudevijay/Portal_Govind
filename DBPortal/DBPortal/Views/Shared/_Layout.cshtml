@@ -61,16 +61,18 @@
             TableEditable.init();
 
         });
-        //$(function () {
-        //    $('#startdate').datetimepicker({
-        //        // viewMode: 'years',
-        //        format: 'DD/MM/YYYY'
-        //    });
-        //    $('#enddate').datetimepicker({
-        //        // viewMode: 'years',
-        //        format: 'DD/MM/YYYY'
-        //    });
-        //});
+        $(function () {
+            $('#StartDate').datetimepicker({
+                // viewMode: 'years',
+               // timepicker: true,
+                format: 'DD/MM/YYYY HH:mm:ss'
+            });
+            $('#EndDate').datetimepicker({
+                // viewMode: 'years',
+               // timepicker: true,
+                format: 'DD/MM/YYYY HH:mm:ss'
+            });
+        });
     </script>
 </body>
 </html>

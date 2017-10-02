@@ -43,18 +43,31 @@ namespace DBPortal.Controllers
             return View(inventory);
         }
 
-        public ActionResult SearchInventory(string searchWord)
+        public ActionResult Quries()
+        {
+
+            return View();
+        }
+
+        public JsonResult GetServerNames(string env)
+        {
+            var results = DBServices.GetTblView("exce sampleprocedure(" + env + ")");
+            var serverNames = DBServices.ToList<ServerNames>(results);
+            return Json(serverNames, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult GetQueryResults(QueryResults model)
         {
             var inventory = new List<InventoryModel>();
 
-            var invData = DBServices.GetTblView("exce sampleprocedure(" + searchWord + ")");
+            var invData = DBServices.GetTblView("exce sampleprocedure");
 
             if (invData.Count > 0)
             {
                 inventory = DBServices.ToList<InventoryModel>(invData);
             }
 
-            return PartialView("_InvData", inventory);
+            return PartialView("_QueryResults", inventory);
         }
     }
 }

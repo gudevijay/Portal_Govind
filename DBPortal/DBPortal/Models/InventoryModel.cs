@@ -22,4 +22,19 @@ namespace DBPortal.Models
         public string CommonName { get; set; }
         public string CMDB_Location { get; set; }
     }
+
+    public class ServerNames
+    {
+        public int ServerID { get; set; }
+        public string ServerName { get; set; }
+    }
+
+    public class QueryResults
+    {
+        public string ServerType { get; set; }
+        public string ServerName { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+        public string Environment { get; set; }
+    }
 }

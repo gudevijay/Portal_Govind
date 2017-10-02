@@ -639,6 +639,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Inventory.cshtml" />
     <Content Include="Views\Home\_InvData.cshtml" />
+    <Content Include="Views\Home\Quries.cshtml" />
+    <Content Include="Views\Home\_QueryResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
