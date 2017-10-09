@@ -1,31 +1,310 @@
-﻿@{
+﻿@using DBPortal.Models
+@model DashboardModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Home Page";
+    var dynamicStyle = "";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<h3 class="page-title">Dashboard</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="@Url.Action("Index", "Home")">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#">DashBoard</a>
+        </li>
+
+    </ul>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+<!-- BEGIN ROW -->
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-4 col-xs-8">
+                <div class="dashboard-stat green-haze">
+                    @*<div align="center" style="font-size:24px; color:white; padding-top:10px">Critical Alerts<hr /></div>*@
+                    <div><br /></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        MSSQL
+                                    </div>
+                                    @{ 
+                                        if(Model.Critical.MsSql > 0)
+                                        {
+                                            dynamicStyle = "badge-danger";
+                                        }
+                                        else
+                                        {
+                                            dynamicStyle = "badge-warning";
+                                        }
+                                    }
+                                    <span class="badge @dynamicStyle">
+                                        @Model.Critical.MsSql
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        SYBASE
+                                    </div>
+                                    @{
+                                        if (Model.Critical.SyBase > 0)
+                                        {
+                                            dynamicStyle = "badge-danger";
+                                        }
+                                        else
+                                        {
+                                            dynamicStyle = "badge-warning";
+                                        }
+                                    }
+                                    <span class="badge @dynamicStyle">
+                                        @Model.Critical.SyBase
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div><br /></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        ORACLE
+                                    </div>
+                                    @{
+                                        if (Model.Critical.Oracle > 0)
+                                        {
+                                            dynamicStyle = "badge-danger";
+                                        }
+                                        else
+                                        {
+                                            dynamicStyle = "badge-warning";
+                                        }
+                                    }
+                                    <span class="badge @dynamicStyle">
+                                        @Model.Critical.Oracle
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        MYSQL
+                                    </div>
+                                    @{
+                                        if (Model.Critical.MySql > 0)
+                                        {
+                                            dynamicStyle = "badge-danger";
+                                        }
+                                        else
+                                        {
+                                            dynamicStyle = "badge-warning";
+                                        }
+                                    }
+                                    <span class="badge @dynamicStyle">
+                                        @Model.Critical.MySql
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div><br /></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        MONGODB
+                                    </div>
+                                    @{
+                                        if (Model.Critical.MongoDB > 0)
+                                        {
+                                            dynamicStyle = "badge-danger";
+                                        }
+                                        else
+                                        {
+                                            dynamicStyle = "badge-warning";
+                                        }
+                                    }
+                                    <span class="badge @dynamicStyle">
+                                        @Model.Critical.MongoDB
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        VERTICA
+                                    </div>
+                                    @{
+                                        if (Model.Critical.Vertica > 0)
+                                        {
+                                            dynamicStyle = "badge-danger";
+                                        }
+                                        else
+                                        {
+                                            dynamicStyle = "badge-warning";
+                                        }
+                                    }
+                                    <span class="badge @dynamicStyle">
+                                        @Model.Critical.Vertica
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="visual">
+                        <i class="fa fa-bell"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            Critical Alerts
+                        </div>
+                    </div>
+
+                    <a class="more" href="javascript:;">
+                        View more <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-4 col-xs-8">
+                <div class="dashboard-stat blue-madison">
+                    @*<div align="center" style="font-size:24px; color:white; padding-top:10px">Critical Alerts<hr /></div>*@
+                    <div><br /></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        Errors
+                                    </div>
+                                    <span class="badge badge-danger">
+                                        @Model.SqlAlerts.Errors
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        Warnings
+                                    </div>
+                                    <span class="badge badge-warning">
+                                        @Model.SqlAlerts.Warnings
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual">
+                        <i class="fa fa-bell"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            SQL Alerts
+                        </div>
+                    </div>
+
+                    <a class="more" href="javascript:;">
+                        View more <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 col-xs-8">
+                <div class="dashboard-stat purple-plum">
+                    @*<div align="center" style="font-size:24px; color:white; padding-top:10px">Critical Alerts<hr /></div>*@
+                    <div><br /></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        Erros
+                                    </div>
+                                    <span class="badge badge-danger">
+                                        @Model.SybaseAlerts.Errors
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        Warnings
+                                    </div>
+                                    <span class="badge badge-warning">
+                                        @Model.SybaseAlerts.Warings
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual">
+                        <i class="fa fa-bell"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            SYBASE Alerts
+                        </div>
+                    </div>
+
+                    <a class="more" href="javascript:;">
+                        View more <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 col-xs-8">
+                <div class="dashboard-stat blue-hoki">
+                    @*<div align="center" style="font-size:24px; color:white; padding-top:10px">Critical Alerts<hr /></div>*@
+                    <div><br /></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        Errors
+                                    </div>
+                                    <span class="badge badge-danger">
+                                       @Model.otherAlerts.Errors
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="icon-btn">
+                                    <div>
+                                        Warnings
+                                    </div>
+                                    <span class="badge badge-warning">
+                                        @Model.otherAlerts.Warings
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual">
+                        <i class="fa fa-bell"></i>
+                    </div>
+                    <div class="details">
+                        <div class="number">
+                            OTHER Alerts
+                        </div>
+                    </div>
+
+                    <a class="more" href="javascript:;">
+                        View more <i class="m-icon-swapright m-icon-white"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- END DASHBOARD STATS -->
+   

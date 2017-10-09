@@ -12,7 +12,14 @@ namespace DBPortal.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            DashboardModel model = new DashboardModel();
+
+            model.Critical = new CriticalAlerts();
+            model.otherAlerts = new OtherAlerts();
+            model.SqlAlerts = new MySqlAlerts();
+            model.SybaseAlerts = new SyBaseAlerts();
+
+            return View(model);
         }
 
         public ActionResult About()
@@ -28,21 +35,6 @@ namespace DBPortal.Controllers
 
             return View();
         }
-
-        public ActionResult Inventory()
-        {
-            var inventory = new List<InventoryModel>();
-
-            var invData = DBServices.GetTblView("exce sampleprocedure");
-
-            if (invData.Count > 0)
-            {
-                inventory = DBServices.ToList<InventoryModel>(invData);
-            }
-
-            return View(inventory);
-        }
-
         public ActionResult Quries()
         {
 

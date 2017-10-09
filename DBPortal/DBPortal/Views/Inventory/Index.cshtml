@@ -1,0 +1,109 @@
+﻿@using DBPortal.Models;
+@model List<InventoryModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- BEGIN PAGE CONTENT-->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-edit"></i>Inventory
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse">
+                    </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config">
+                    </a>
+                    <a href="javascript:;" class="reload">
+                    </a>
+                    <a href="javascript:;" class="remove">
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                          
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group pull-right">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                    Tools <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="javascript:;">
+                                            Print
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            Save as PDF
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            Export to Excel
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-bordered table-hover" id="sample_1">
+                    <thead>
+                        <tr>
+                            <th>ServerID</th>
+                            <th>ServerIP</th>
+                            <th>ServerPort</th>
+                            <th>Name</th>
+                            <th>InstanceName</th>
+                            <th>SQLVersion</th>
+                            <th>Edition</th>
+                            <th>OSVesion</th>
+                            <th>ServeType</th>
+                            <th>IsActive</th>
+                            <th>ServerEnv</th>
+                            <th>Description</th>
+                            <th>CommonName</th>
+                            <th>CMDB_Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var inv in Model)
+            {
+                            <tr>
+                                <td>@inv.ServerID</td>
+                                <td>@inv.ServerIP</td>
+                                <td>@inv.ServerPort</td>
+                                <td>@inv.Name</td>
+                                <td>@inv.InstanceName</td>
+                                <td>@inv.SQLVersion</td>
+                                <td>@inv.Edition</td>
+                                <td>@inv.OSVesion</td>
+                                <td>@inv.ServeType</td>
+                                <td>@inv.IsActive</td>
+                                <td>@inv.ServerEnv</td>
+                                <td>@inv.Description</td>
+                                <td>@inv.CommonName</td>
+                                <td>@inv.CMDB_Location</td>
+                            </tr>
+                        }
+                    </tbody>
+                   
+                </table>
+
+            </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+</div>
+<!-- END PAGE CONTENT -->
+

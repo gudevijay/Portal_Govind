@@ -1,138 +1,48 @@
-F:\Sample Projects\DBPortal\DBPortal\obj\Debug\DBPortal.csprojResolveAssemblyReference.cache
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\csc.exe
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\Microsoft.CodeAnalysis.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\Microsoft.CSharp.Core.targets
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\Microsoft.VisualBasic.Core.targets
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\System.Collections.Immutable.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\System.Reflection.Metadata.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\vbc.exe
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\VBCSCompiler.exe
-F:\Sample Projects\DBPortal\DBPortal\bin\roslyn\VBCSCompiler.exe.config
-F:\Sample Projects\DBPortal\DBPortal\bin\DBPortal.dll.config
-F:\Sample Projects\DBPortal\DBPortal\bin\DBPortal.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\DBPortal.pdb
-F:\Sample Projects\DBPortal\DBPortal\bin\Antlr3.Runtime.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\EntityFramework.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\EntityFramework.SqlServer.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.Core.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.Owin.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Host.SystemWeb.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Cookies.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Facebook.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Google.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.OAuth.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Twitter.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Web.Infrastructure.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Newtonsoft.Json.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Owin.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.Helpers.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.Mvc.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.Optimization.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.Razor.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Deployment.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.WebPages.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Razor.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\WebGrease.dll
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.Helpers.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.Mvc.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.Optimization.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.Razor.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.WebPages.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Deployment.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Razor.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Antlr3.Runtime.pdb
-F:\Sample Projects\DBPortal\DBPortal\bin\Newtonsoft.Json.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\EntityFramework.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\EntityFramework.SqlServer.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.Core.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.Owin.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Host.SystemWeb.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Facebook.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Cookies.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.OAuth.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Google.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Twitter.xml
-F:\Sample Projects\DBPortal\DBPortal\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-F:\Sample Projects\DBPortal\DBPortal\obj\Debug\DBPortal.dll
-F:\Sample Projects\DBPortal\DBPortal\obj\Debug\DBPortal.pdb
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\csc.exe
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\Microsoft.CodeAnalysis.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\Microsoft.CSharp.Core.targets
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\Microsoft.VisualBasic.Core.targets
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\System.Collections.Immutable.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\System.Reflection.Metadata.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\vbc.exe
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\VBCSCompiler.exe
-F:\Portal_Govind\DBPortal\DBPortal\bin\roslyn\VBCSCompiler.exe.config
-F:\Portal_Govind\DBPortal\DBPortal\bin\DBPortal.dll.config
-F:\Portal_Govind\DBPortal\DBPortal\bin\DBPortal.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\DBPortal.pdb
-F:\Portal_Govind\DBPortal\DBPortal\bin\Antlr3.Runtime.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\EntityFramework.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\EntityFramework.SqlServer.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.Core.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.Owin.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Host.SystemWeb.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Cookies.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Facebook.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Google.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.OAuth.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Twitter.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Web.Infrastructure.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Newtonsoft.Json.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Owin.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.Helpers.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.Mvc.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.Optimization.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.Razor.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.WebPages.Deployment.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.WebPages.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.WebPages.Razor.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\WebGrease.dll
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.Helpers.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.Mvc.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.Optimization.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.Razor.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.WebPages.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.WebPages.Deployment.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\System.Web.WebPages.Razor.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Antlr3.Runtime.pdb
-F:\Portal_Govind\DBPortal\DBPortal\bin\Newtonsoft.Json.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\EntityFramework.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\EntityFramework.SqlServer.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.Core.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.Owin.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Host.SystemWeb.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Facebook.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Cookies.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.OAuth.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Google.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.Twitter.xml
-F:\Portal_Govind\DBPortal\DBPortal\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-F:\Portal_Govind\DBPortal\DBPortal\obj\Debug\DBPortal.csprojResolveAssemblyReference.cache
-F:\Portal_Govind\DBPortal\DBPortal\obj\Debug\DBPortal.dll
-F:\Portal_Govind\DBPortal\DBPortal\obj\Debug\DBPortal.pdb
+F:\Personal Projects\DBPortal\DBPortal\bin\DBPortal.dll.config
+F:\Personal Projects\DBPortal\DBPortal\bin\DBPortal.dll
+F:\Personal Projects\DBPortal\DBPortal\bin\DBPortal.pdb
+F:\Personal Projects\DBPortal\DBPortal\bin\Antlr3.Runtime.dll
+F:\Personal Projects\DBPortal\DBPortal\bin\Microsoft.Web.Infrastructure.dll
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.Helpers.dll
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.Mvc.dll
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.Optimization.dll
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.Razor.dll
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Deployment.dll
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.dll
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Razor.dll
+F:\Personal Projects\DBPortal\DBPortal\bin\WebGrease.dll
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.Helpers.xml
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.Mvc.xml
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.Optimization.xml
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.Razor.xml
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.xml
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Deployment.xml
+F:\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Razor.xml
+F:\Personal Projects\DBPortal\DBPortal\bin\Antlr3.Runtime.pdb
+F:\Personal Projects\DBPortal\DBPortal\obj\Debug\DBPortal.csprojResolveAssemblyReference.cache
+F:\Personal Projects\DBPortal\DBPortal\obj\Debug\DBPortal.dll
+F:\Personal Projects\DBPortal\DBPortal\obj\Debug\DBPortal.pdb
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\DBPortal.dll.config
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\DBPortal.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\DBPortal.pdb
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\Antlr3.Runtime.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\Microsoft.Web.Infrastructure.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.Helpers.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.Mvc.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.Optimization.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.Razor.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Deployment.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Razor.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\WebGrease.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.Helpers.xml
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.Mvc.xml
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.Optimization.xml
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.Razor.xml
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.xml
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Deployment.xml
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\System.Web.WebPages.Razor.xml
+F:\Projects\Personal Projects\DBPortal\DBPortal\bin\Antlr3.Runtime.pdb
+F:\Projects\Personal Projects\DBPortal\DBPortal\obj\Debug\DBPortal.csprojResolveAssemblyReference.cache
+F:\Projects\Personal Projects\DBPortal\DBPortal\obj\Debug\DBPortal.dll
+F:\Projects\Personal Projects\DBPortal\DBPortal\obj\Debug\DBPortal.pdb

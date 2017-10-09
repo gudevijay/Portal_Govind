@@ -1,66 +1,406 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <title>DBPortal</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link href="~/Content/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES FOR Tables -->
+    <link rel="stylesheet" type="text/css" href="~/Content/global/plugins/select2/select2.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css" />
+    <!-- END PAGE LEVEL STYLES FOR Tables -->
+    <!-- BEGIN THEME STYLES  -->
+    <link href="~/Content/global/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+    <link href="~/Content/global/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/admin/layout/css/layout.css" rel="stylesheet" type="text/css" />
+    <link id="style_color" href="~/Content/admin/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/admin/layout/css/custom.css" rel="stylesheet" type="text/css" />
+    <script src="~/Content/global/plugins/jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
-    <link rel="stylesheet" type="text/css" href="~/Content/select2/select2.css" />
-    <link rel="stylesheet" type="text/css" href="~/Content/datatables/plugins/bootstrap/dataTables.bootstrap.css" />
-    @Scripts.Render("~/bundles/modernizr")
-
+    <!-- END THEME STYLES -->
+    <link rel="shortcut icon" href="favicon.ico" />
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<body class="page-header-fixed page-quick-sidebar-over-content">
+    <!-- BEGIN HEADER -->
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner">
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/Content/admin/layout/img/logo.png" alt="logo" class="logo-default" />
+                </a>
+                <div class="menu-toggler sidebar-toggler hide">
+                    <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+            </a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            <!-- BEGIN TOP NAVIGATION MENU -->
+            <div class="top-menu">
+                <ul class="nav navbar-nav pull-right">
+                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                    <li class="dropdown dropdown-user">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <img alt="" class="img-circle" src="~/Content/admin/layout/img/avatar3_small.jpg" />
+                            <span class="username username-hide-on-mobile">
+                                Nick
+                            </span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-default">
+                            <li>
+                                <a href="#">
+                                    <i class="icon-user"></i> My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Logout","Account")">
+                                    <i class="icon-key"></i> Log Out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END USER LOGIN DROPDOWN -->
                 </ul>
-                @Html.Partial("_LoginPartial")
+            </div>
+            <!-- END TOP NAVIGATION MENU -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER -->
+    <div class="clearfix">
+    </div>
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <div class="page-sidebar navbar-collapse collapse">
+                <!-- BEGIN SIDEBAR MENU -->
+                <ul class="page-sidebar-menu page-sidebar-menu-hover-submenu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                    <li class="sidebar-toggler-wrapper">
+                        <div class="sidebar-toggler">
+                        </div>
+                    </li>
+                    <li class="active start ">
+                        <a href="javascript:;">
+                            <i class="icon-home"></i>
+                            <span class="title">Dashboard</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                            <span class="title">Inventory</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-windows" aria-hidden="true"></i>
+                            <span class="title">Microsoft</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="icon-bar-chart"></i>
+                                   Server Profile
+                                    <span class="arrow "></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-bulb"></i>
+                                    Backup & Maintenance
+                                    <span class="arrow "></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-bar-chart"></i>
+                                            Backup Status
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-bulb"></i>
+                                            Backup History
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-graph"></i>
+                                            Maintenance Job Status
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-home"></i>
+                                  Recovery Status
+                                    <span class="arrow "></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-bar-chart"></i>
+                                            Secondary Sync Status
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-bulb"></i>
+                                            Mirroring Statistics
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-graph"></i>
+                                            DR Setup Report
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-home"></i>
+                                   Growth Analysis
+                                    <span class="arrow "></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-bar-chart"></i>
+                                            Database Space Report
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-bulb"></i>
+                                            Disk Space Report
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-graph"></i>
+                                            Log Growth Report
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-graph"></i>
+                                            Database Size
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-home"></i>
+                                   Server Performace
+                                    <span class="arrow "></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-bar-chart"></i>
+                                            Single Server Multiple Counters
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-bulb"></i>
+                                            CPU Utilization Report
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-graph"></i>
+                                            Index Statistics
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-home"></i>
+                                    Auditing Analysis
+                                    <span class="arrow "></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-bar-chart"></i>
+                                            Server Login Reports
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-bulb"></i>
+                                            Server Configuration
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-graph"></i>
+                                            Database Permissions
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-home"></i>
+                                    Collection Process
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon-globe"></i>
+                            <span class="title">Sybase</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="icon-bar-chart"></i>
+                                    Server Profile
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                            <span class="title">Oracle</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="icon-bar-chart"></i>
+                                    Server Profile
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-database" aria-hidden="true"></i>
+                            <span class="title">MySql</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="icon-bar-chart"></i>
+                                    Server Profile
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-cogs" aria-hidden="true"></i>
+                            <span class="title">Utilities</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- END SIDEBAR MENU -->
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <div class="page-content">
+                @RenderBody()
+            </div>
+        </div>
+        <!-- END CONTENT -->
 
-    @Scripts.Render("~/bundles/jquery")
-    <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer">
+        <div class="page-footer-inner">
+            @DateTime.UtcNow.Year &copy; Govind Pokuri.
+        </div>
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
+    </div>
+    <script src="~/Content/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+    @*<script src="~/Content/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>*@
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN Chart PAGE LEVEL PLUGINS -->
+    @*<script src="~/Content/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/amcharts/amcharts/radar.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/amcharts/amcharts/themes/patterns.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/amcharts/amcharts/themes/chalk.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/amcharts/ammap/ammap.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/amcharts/ammap/maps/js/worldLow.js" type="text/javascript"></script>
+    <script src="~/Content/global/plugins/amcharts/amstockcharts/amstock.js" type="text/javascript"></script>*@
+    <!-- END Chart PAGE LEVEL PLUGINS -->
+    <!-- BEGIN Tables PAGE LEVEL PLUGINS -->
+    <script type="text/javascript" src="~/Content/global/plugins/select2/select2.min.js"></script>
+    <script type="text/javascript" src="~/Content/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/Content/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+    <!-- END Tables PAGE LEVEL PLUGINS -->
+
+    <script src="~/Content/global/scripts/metronic.js" type="text/javascript"></script>
+    <script src="~/Content/admin/layout/scripts/layout.js" type="text/javascript"></script>
+    <script src="~/Content/admin/layout/scripts/demo.js" type="text/javascript"></script>
+    <!-- Only for Charts -->
+    @*<script src="~/Content/admin/pages/scripts/charts-amcharts.js"></script>*@
+    <!-- Only for Charts -->
+    <!-- Only for Tables -->
+    <script src="~/Content/admin/pages/scripts/table-managed.js"></script>
+    <!-- Only for Tables -->
+    <!-- Only for Forms -->
+    <script src="~/Content/admin/pages/scripts/form-samples.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-    <script type="text/javascript" src="~/Content/select2/select2.min.js"></script>
-    <script type="text/javascript" src="~/Content/datatables/media/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="~/Content/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
-    <script src="~/Content/table-editable.js"></script>
-    @Scripts.Render("~/bundles/bootstrap")
-
-    @RenderSection("scripts", required: false)
-
+    <!-- Only for Forms -->
     <script>
-    //$(document).ready(function () {
-    //    $('#example').DataTable();
-        //});
         jQuery(document).ready(function () {
-            TableEditable.init();
-
+            Metronic.init(); // init metronic core components
+            Layout.init(); // init current layout
+            Demo.init(); // init demo features
+            //ChartsAmcharts.init(); // init demo charts
+            TableManaged.init(); // init Data Tables
+            FormSamples.init(); // int Form Samples
         });
+  
         $(function () {
             $('#StartDate').datetimepicker({
                 // viewMode: 'years',
@@ -74,5 +414,7 @@
             });
         });
     </script>
+    <!-- END JAVASCRIPTS -->
 </body>
+<!-- END BODY -->
 </html>
